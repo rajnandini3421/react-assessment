@@ -30,39 +30,11 @@ const characterDetailsRoute = new Route({
   component: CharacterDetails,
 })
 
-const NotFound = () => (
-  <div style={{ 
-    display: 'flex', 
-    flexDirection: 'column', 
-    alignItems: 'center', 
-    justifyContent: 'center', 
-    height: '80vh', 
-    textAlign: 'center' 
-  }}>
-    <h1 style={{ fontSize: 40, marginBottom: 16 }}>🚫 Page Not Found</h1>
-    <p style={{ fontSize: 18, marginBottom: 24 }}>
-      Sorry, the page you are looking for doesn’t exist.
-    </p>
-    <a 
-      href="/characters?page=1" 
-      style={{ 
-        padding: '10px 20px', 
-        borderRadius: 8, 
-        textDecoration: 'none', 
-        background: '#007bff', 
-        color: '#fff', 
-        fontWeight: 'bold' 
-      }}
-    >
-      ⬅ Back to Characters
-    </a>
-  </div>
-)
 
-// ✅ Define notFoundRoute
-const notFoundRoute = new NotFoundRoute({
+const notFoundRoute = new Route({
   getParentRoute: () => rootRoute,
-  component: NotFound,
+  path: '*', 
+  component: () => null,
 })
 
 // Assemble route tree
@@ -72,10 +44,8 @@ const routeTree = rootRoute.addChildren([
   notFoundRoute
 ])
 
-// Create router instance
 export const router = new Router({ routeTree })
 
-// Register for type safety (important in TS)
 declare module '@tanstack/react-router' {
   interface Register {
     router: typeof router

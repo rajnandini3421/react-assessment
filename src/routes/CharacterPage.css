@@ -1,0 +1,132 @@
+/* Container */
+.page-container {
+/* //  max-width: 1000px; */
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #2c3e50;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Table wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Table */
+.character-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.character-table thead {
+  background: #3498db;
+  color: white;
+}
+
+.character-table th, 
+.character-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.character-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Avatar */
+.avatar {
+  width: 60px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+/* Links */
+.view-link {
+  color: #3498db;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.view-link:hover {
+  color: #1d6fa5;
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #3498db;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.btn.secondary {
+  background: #2ecc71;
+}
+
+.btn.secondary:hover {
+  background: #27ae60;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  gap: 16px;
+}
+
+.page-info {
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Status messages */
+.status {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 1.1rem;
+}
+
+.status.loading {
+  color: #3498db;
+}
+
+.status.error {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.character-details li{
+  color: #30424f;
+}
